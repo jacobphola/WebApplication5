@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+    <div class="w3-bar w3-black">
+        <a href="@Url.Action("Index", "Stack")" class="w3-bar-item w3-button w3-mobile">Stack</a>
+        <a href="@Url.Action("Index", "Queue")" class="w3-bar-item w3-button w3-mobile">Queue</a>
+        <a href="@Url.Action("Index", "Dictionary")" class="w3-bar-item w3-button w3-mobile">Dictionary</a>
+        <a href="@Url.Action("Index", "Exit")" class="w3-bar-item w3-button w3-mobile">Exit</a>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">
+        <h3 class="w3-bar-item">Menu</h3>
+        <a href="@Url.Action("Add1", "Stack")" class="w3-bar-item w3-button">1. Add one item to Stack</a>
+        <a href="@Url.Action("AddHuge", "Stack")" class="w3-bar-item w3-button">2. Add Huge List of Items to Stack</a>
+        <a href="@Url.Action("Display", "Stack")" class="w3-bar-item w3-button">3. Display Stack</a>
+        <a href="@Url.Action("DeleteForm", "Stack")" class="w3-bar-item w3-button">4. Delete from Stack</a>
+        <a href="@Url.Action("ClearStack", "Stack")" class="w3-bar-item w3-button">5. Clear Stack</a>
+        <a href="@Url.Action("SearchForm", "Stack")" class="w3-bar-item w3-button">6. Search Stack</a>
+        <a href="@Url.Action("Index", "Home")" class="w3-bar-item w3-button">7. Return to Main Menu</a>
+    </div><!-- Page Content -->
+    <div style="margin-left:25%">
+
+        <div class="w3-container w3-teal">
+            <h1>My Stack</h1>
+        </div>
+
+        <p style="color:red">@ViewBag.error</p>
+        <p>@Html.Raw(ViewBag.myStack)</p>
+        <p>@ViewBag.deletedItem</p>
+        <p>@ViewBag.deleteNotFound</p>
+        <p>@ViewBag.searchNotFound</p>
+        <p>@ViewBag.searchedItem</p>
+        <p>@ViewBag.StopWatch</p>
+    </div>
+
+</body>
+</html>

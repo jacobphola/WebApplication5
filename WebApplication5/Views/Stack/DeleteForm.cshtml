@@ -1,0 +1,21 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DeleteForm</title>
+</head>
+<body>
+    <div>
+        <form action='@Url.Action("Delete", "Stack")' method="post">
+            <label for="delete">Which Item # would you like to delete?</label><input type="text" name="delete" id="delete" placeholder="Ex: 2,4,17,etc." />
+            <input type="submit" value="Delete" />
+        </form>
+    </div>
+</body>
+</html>
